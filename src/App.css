@@ -1,38 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins",sans-serif ;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  height: 100dvh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body:has(.App  .App__general-container-dark){
+  background-color: #222;
+  color: #fff;
+  transition: background .2s, color .2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App__new-note-container{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #48e;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  border: none;
+  padding: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App__new-note-container{
+  transition: scale .2s;
 }
 
-.App-link {
-  color: #61dafb;
+.new-note-icon{
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__new-note-container:hover{
+  scale: 1.2;
 }
+
+.notes__list{
+  padding: 16px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  max-width: 1200px;
+  gap: 10px;
+}
+

@@ -1,0 +1,52 @@
+.note__general-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 35dvh;
+    background-color: #f7f8f9;
+    justify-content: space-between;
+    color: #222;
+    border-radius: 8px;
+    max-height: 40dvh;
+}
+
+.note__title-container h2{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 4px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #2225;
+
+}
+
+.note__content-container{
+    overflow: auto;
+    padding: 32px;
+}
+
+.note__interaction-section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    font-size: 1.2rem;
+    padding: 8px;
+    color: #48e;
+}
+
+.interaction-icon{
+    transition: scale .2s;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.interaction-icon:hover{
+    background-color: #f1f2f3;
+    scale: 1.2;
+}
+
+
+
+.App__general-container-dark ~ .notes__list .note__general-container{
+    background-color: #444;
+    color: #fff;
+}
